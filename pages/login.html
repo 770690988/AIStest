@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/iconfont/zhanghu/iconfont.css" />
+    <link rel="stylesheet" href="../assets/iconfont/mima/iconfont.css" />
+
+    <title>登录界面</title>
+</head>
+<div id="headTitle">
+    <h1>杭电AIS社团</h1>
+</div>
+
+<body>
+    <div id="bigBox">
+        <h1>
+            LOGIN
+        </h1>
+        <div class="inputBox">
+            <div class="inputText">
+                <span class="iconfont icon-zhanghu"></span>
+                <input type="text" class="zhanghu" placeholder="Username" />
+            </div>
+            <div class="inputText">
+                <span class="iconfont icon-mima"></span>
+                <input type="password" class="zhanghu" placeholder="Password" />
+            </div>
+
+            <a>
+                <input type="submit" class="inputButton" value="LOGIN" herf="html/menu.html" onclick="jyzhanghu()" />
+            </a>
+        </div>
+    </div>
+    <script>
+        function jyzhanghu() {
+            //这里校验输入的账户字符都为数字，其他都不行
+            var reg = /^\d{8}$/;
+            var t1 = document.getElementsByClassName("zhanghu")[0];
+            alert(t1.value);
+            if (reg.test(t1.value)) {
+                location.href = "../index.html";
+                console.log("登录成功");
+            } else {
+                alert("请输入8位数字的账户！");
+                var t2 = document.getElementsByClassName("inputText")[0];
+                t2.className = "inputText1";
+            }
+        }
+
+        function jymima() {
+
+        }
+    </script>
+</body>
+
+</html>

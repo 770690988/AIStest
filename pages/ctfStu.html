@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>CTF小组</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/iconfont/menu/iconfont.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="left">
+            <a href="#menu"><span>Menu</span></a>
+        </nav>
+        <a href="index.html" class="logo1"></a><a class="logo">CTF小组</a>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li>
+                <a href="../index.html">
+                    <span class="iconfont icon-zhuye"></span>
+                    <span class="title">主页</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="student.html">
+                    <span class="iconfont icon-xueshengjiguanli"></span>
+                    <span class="title">学生界面</span></a>
+            </li>
+            <li>
+
+                <a href="teacher.html">
+                    <span class="iconfont icon-jiaolian1"></span>
+                    <span class="title">教师界面</span>
+                </a>
+            </li>
+            <!--登录部分未完善
+            <li>
+                <a href="pages/login.html">
+                    <span class="iconfont icon-logindenglu"></span>
+                    <span class="title">登录</span></a>
+            </li>
+            -->
+            <li>
+
+                <a href="#">
+                    <span class="iconfont icon-kaifa"></span>
+                    <span class="title">开发中...</span></a>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="col-row-10 col-xs-row-1" id="stuWorkList">
+            <h1>任务清单</h1>
+            <div class="col-xs-6" id="biaoge11">
+                <div class="col-xs" id="biaoge">
+                    任务标题
+                </div>
+
+            </div>
+            <div class="col-xs-3" id="biaoge12">
+                <div class="col-xs" id="biaoge">
+                    相关资料
+                </div>
+
+            </div>
+            <div class="col-xs-3" style="color: azure;" id="biaoge13">
+                <div class="col-xs" id="biaoge">
+                    任务详情
+                </div>
+
+            </div>
+            <div id="taskDetail"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <h2>Get In Touch</h2>
+            <ul class="actions">
+                <li><span class="icon fa-envelope"></span> <a href="#">915816252@qq.com</a></li>
+                <li><span class="icon fa-envelope"></span> <a href="#">770690988@qq.com</a></li>
+                <li><span class="icon fa-map-marker"></span>杭州电子科技大学AIS Club</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; AIS Club of HDU
+        </div>
+    </footer>
+
+    <!--script部分-->
+
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!--学生端读取数据-->
+    <script type="text/javascript">
+        $.ajax({
+            type: "get",
+            url: "https://aistask.api.hduapp.com/task/list",
+            dataType: "json", //如果是json数据在接收到返回值的时候会自动封装成json对象
+            data: {},
+            contentType: 'application/x-www-form-urlencoded',
+            success(data) {
+                console.log(data);
+                var table1 = $("");
+                var table2 = $("");
+                var table3 = $("");
+                var tableKind = $(""); //用于存放作业类型
+                for (var i = data.length - 1; i >= 0; i--) {
+                    var taskData = data[i];
+                    tableKind = $("");
+                    //得到数组中的每一个元素
+                    var category = taskData.category;
+                    category = taskData.category;
+                    tableKind.append(category);
+                    console.log(category);
+                    if (category == "3") {
+                        var taskId = taskData.taskID;
+                        var taskTitle = "<div class='col-xs' id='biaoge'>" + taskData.title + "</div>";
+                        var taskUrl = "<div class='col-xs' id='biaoge'><a href ='http://" + taskData.refUrl + "'>网址链接</a></div>";
+                        let taskDetail = taskData.detail;
+                        let taskButtonContainer = document.createElement("div");
+                        taskButtonContainer.className = "col-xs";
+                        taskButtonContainer.id = "biaoge"
+
+                        function newDetailButton() {
+                            let detailButton = document.createElement("button")
+                            detailButton.className = "btn btn-primary btn-xs"
+                            detailButton.onclick = function() {
+                                showTaskDetail(taskDetail);
+                            }
+                            detailButton.textContent = "任务详情"
+                            return detailButton
+                        }
+                        let detailButton = newDetailButton()
+                        taskButtonContainer.appendChild(detailButton);
+
+                        function newDeleteButton() {
+                            let deleteButton = document.createElement("button")
+                            deleteButton.className = "btn btn-danger btn-xs"
+                            deleteButton.onclick = function() {
+                                shanchuzuoye(taskId);
+                            }
+                            deleteButton.textContent = "任务删除"
+                            return deleteButton
+                        }
+                        let deleteButton = newDeleteButton()
+                        taskButtonContainer.appendChild(deleteButton);
+
+                        //将taskTitle元素设置到table1元素中
+                        table1.append(taskTitle);
+                        table2.append(taskUrl);
+
+                        console.log(taskTitle);
+                        //将ul设置到body中
+                        $("#biaoge11").append(taskTitle);
+                        $("#biaoge12").append(taskUrl);
+                        $("#biaoge13").append(taskButtonContainer);
+                        table1 = $("");
+                        table2 = $("");
+                    }
+
+                }
+            },
+            error(data) {
+                var name = 2;
+                console.log(name);
+                console.log(data);
+                $("#s1").html(data);
+            }
+        })
+
+        function showTaskDetail(detail) {
+            $("#taskDetail")[0].innerText = detail;
+        }
+    </script>
+    <script type="text/javascript">
+        function shanchuzuoye(ID) {
+            mima = prompt("请输入网页的密码:", "");
+            if (mima == 123789456) {
+                $.ajax({
+                    type: "post",
+                    url: "https://aistask.api.hduapp.com/task/delete",
+                    dataType: "text",
+                    data: ID.toString(),
+                    contentType: 'application/json;charset=UTF-8',
+                    success() {
+                        alert("已成功删除数据");
+                        window.location.reload();
+                    }
+                })
+            } else {
+                alert("密码错误");
+                window.location.reload();
+            }
+        }
+    </script>
+
+</body>

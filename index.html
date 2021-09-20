@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>AIS Club</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/iconfont/menu/iconfont.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="left">
+            <a href="#menu"><span>Menu</span></a>
+        </nav>
+        <a href="index.html" class="logo1">AIS Club of HDU</a>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li>
+                <a href="index.html">
+                    <span class="iconfont icon-zhuye"></span>
+                    <span class="title">主页</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/student.html">
+                    <span class="iconfont icon-xueshengjiguanli"></span>
+                    <span class="title">学生界面</span></a>
+            </li>
+            <li>
+
+                <a href="pages/teacher.html">
+                    <span class="iconfont icon-jiaolian1"></span>
+                    <span class="title">教师界面</span>
+                </a>
+            </li>
+            <!--登录部分未完善
+            <li>
+                <a href="pages/login.html">
+                    <span class="iconfont icon-logindenglu"></span>
+                    <span class="title">登录</span></a>
+            </li>
+            -->
+            <li>
+
+                <a href="#">
+                    <span class="iconfont icon-kaifa"></span>
+                    <span class="title">开发中...</span></a>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="content">
+        </div>
+    </section>
+
+    <!-- One -->
+    <!-- <section id="two" class="wrapper style1 special">
+        <div class="inner">
+            <h2>社团简介</h2>
+        </div>
+    </section> -->
+    <section id="one" class="wrapper">
+        <div class="inner flex flex-3">
+            <div class="flex-item left">
+                <div>
+                    <h3>Who Are We?</h3>
+                    <p style="color: #232323; font-weight: bold;">
+                        AIS成立于2021年，从属卓越学院，下设人工智能组、安全开发组、CTF组，立志于搭建一个与本科导师制共同发展的双阶段科技活动平台。
+                    </p>
+                </div>
+                <div>
+                    <h3>What Do We Do?</h3>
+                    <p style="color: #232323;; font-weight: bold;">AIS实施双阶段培养，以三个方向的基础知识学习为牵引，以竞赛、科研成果为导向，以老带新组织社团活动。培养社团成员在人工智能、安全开发、CTF三个方向的实践能力，并且组队参加CTF、DataCon、互联网+等各类相关竞赛以及组队进行论文研究和企业实战项目开发。
+                    </p>
+                </div>
+            </div>
+            <div class="flex-item flex-item-center image fit round">
+                <img src="images/logo.jpg" alt="" />
+            </div>
+            <div class="flex-item right">
+                <div>
+                    <h3>What can you get here?</h3>
+                    <p style="color: #232323;; font-weight: bold;">社团成员在培养过程中，不仅可以得到胡海滨、吕秋云、王震、王小军四位指导老师以及社团学长的学习指导，学习课外知识，也能和社团成员一起参加比赛，沉淀知识，斩获荣誉！</p>
+                </div>
+                <div>
+                    <h3>How to join us?</h3>
+                    <p style="color: #232323; font-weight: bold;">AIS社团面向杭电全校各年级同学招新并设人工智能、安全开发、CTF共三个方向供选择，如果有兴趣请加QQ群<a style="color:red;font-weight: bold;">550626555</a></br>欢迎加入AIS社团！祝你收货满满~</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two -->
+    <!-- <section id="two" class="wrapper style1 special">
+        <div class="inner">
+            <h2 class="subtitle">教师风采</h2>
+        </div>
+    </section> -->
+    <section class="subtitle">
+        <div class="col-lg-6 col-lg-offset-3" id="TeacherIntroduction">
+            <h2>教师介绍</h2>
+            <p>社团具有四位经验丰富的指导老师，他们将分别从人工智能、安全开发、CTF三个方向指导学生学习并且带领学生参加各类比赛<br>在优秀的教师指导下，相信优秀你定能卓越出众！</p>
+        </div>
+    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <!--轮播图-->
+                <div id="lbt1" class="carousel slide " data-ride="carousel" data-interval="5000">
+                    <!--这里的data-interval用于设定轮播的速度数值属性为毫秒-->
+
+                    <!--小圆点-->
+                    <ol class="carousel-indicators">
+                        <!--这里面有多少个li就可以放多少个图片，个数不够可以加-->
+                        <li data-target="#lbt1" data-slide-to="0" class="active"></li>
+                        <li data-target="#lbt1" data-slide-to="1"></li>
+                        <li data-target="#lbt1" data-slide-to="2"></li>
+                        <li data-target="#lbt1" data-slide-to="3"></li>
+                    </ol>
+                    <!-- 轮播图图片主体部分 -->
+
+                    <div id="lbt" class="carousel-inner" role="listbox">
+                        <!--第一张图片-->
+                        <div class="item active">
+                            <!--这里因为设置了active所以默认显示的是这张图片-->
+                            <img id="laoshiPicture" src="images/teacherPosts/huhaibing.png" alt="...">
+                            <div class="carousel-caption">
+                                胡海滨：卓越学院党委副书记，杭电助手指导教师，校学工部信息化主要负责人。牵头完成校学生工作系统、“上课啦”教管辅系统，杭电助手平台、疫情防控系统等多项实践项目的设计与实施工作，具备丰富的实践项目指导经历。
+                            </div>
+                        </div>
+                        <!--第二张图片-->
+                        <div class="item">
+                            <img id="laoshiPicture" src="images/teacherPosts/lvqiuyun.png" alt="...">
+                            <div class="carousel-caption">
+                                吕秋云：原信息安全协会（Vidar team 前身）创立者，2007年至今指导各级各类信息安全相关竞赛、服务外包竞赛、互联网＋竞赛等30余支队伍，获国家级竞赛一等奖1项，二等奖3项，三等奖10项，其他级奖项多项。指导本科生发表SCI检索、EI检索和核心期刊论文5篇。具备丰富的安全类竞赛和本科生科研工作的指导经验。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img id="laoshiPicture" src="images/teacherPosts/wangxiaojun.png" alt="...">
+                            <div class="carousel-caption">
+                                王小军：杭州电子科技大学赛博协会和0RAYS战队指导教师。指导40余支学生队伍参加各级CTF类竞赛，获国家级一等奖3项及二等奖5项、其他各级奖项多项。具备丰富的CTF类竞赛指导经验。
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img id="laoshiPicture" src="images/teacherPosts/wangzhen.png" alt="...">
+                            <div class="carousel-caption">
+                                王震：网络空间安全专业负责人，人工智能安全创新实验班负责人，校数学建模组核心指导教师，指导100余支本科和研究生队伍参加数学建模竞赛，获国际级一等奖9项，二等奖39项，国家级一等奖1项，二等奖11项，其他各级奖项多项。指导本科生发表人工智能相关科研论文SCI检索、EI检索和核心期刊论文19篇。具备丰富的数学建模类竞赛和本科生人工智能相关科研工作的指导经验。
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 左右控制按钮 -->
+                    <a class="left carousel-control" href="#lbt1" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#lbt1" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Three -->
+    <!-- <section id="two" class="wrapper style1 special">
+        <div class="inner">
+            <h2 class="subtitle">社团分组</h2>
+        </div>
+    </section> -->
+    <!-- <section class="subtitle">
+        <h2>社团分组</h2>
+    </section> -->
+    <section id="three" class="wrapper">
+        <div class="inner flex flex-3">
+            <div class="flex-item box">
+                <div class="image fit">
+                    <img src="images/pic05.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="pages/aiStu.html">
+                        <h3>人工智能组</h3>
+                    </a>
+                    <p>Artificial Intelligent</p>
+                </div>
+            </div>
+            <div class="flex-item box">
+                <div class="image fit">
+                    <img src="images/pic03.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="pages/engineeringStu.html">
+                        <h3>安全开发组</h3>
+                    </a>
+                    <p>Software Engineering and Safety</p>
+                </div>
+            </div>
+            <div class="flex-item box">
+                <div class="image fit">
+                    <img src="images/pic04.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="pages/ctfStu.html">
+                        <h3>CTF组</h3>
+                    </a>
+                    <p>Capture The Flag</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <h2>Get In Touch</h2>
+            <ul class="actions">
+                <li><span class="icon fa-envelope"></span> <a href="#">915816252@qq.com</a></li>
+                <li><span class="icon fa-envelope"></span> <a href="#">770690988@qq.com</a></li>
+                <li><span class="icon fa-map-marker"></span>杭州电子科技大学AIS Club</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; AIS Club of HDU
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+</body>
+
+</html>

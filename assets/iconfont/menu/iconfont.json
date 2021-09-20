@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1013146",
+      "name": "老师",
+      "font_class": "jiaolian1",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "1659303",
+      "name": "学生机管理",
+      "font_class": "xueshengjiguanli",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    },
+    {
+      "icon_id": "8084584",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "12339784",
+      "name": "开发",
+      "font_class": "kaifa",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "20009243",
+      "name": "login登陆",
+      "font_class": "logindenglu",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    }
+  ]
+}

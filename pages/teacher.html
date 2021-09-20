@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Teacher Module</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/iconfont/menu/iconfont.css">
+
+</head>
+
+<body>
+    <script language="javascript">
+        mima = prompt("请输入网页的密码:", "");
+        if (mima != 123789456) {
+            alert("密码错误");
+            location.href = "../index.html";
+        }
+    </script>
+    <!-- Header -->
+    <header id="header">
+        <nav class="left">
+            <a href="#menu"><span>Menu</span></a>
+        </nav>
+        <a href="index.html" class="logo1"></a><a class="logo">教师界面</a>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li>
+                <a href="../index.html">
+                    <span class="iconfont icon-zhuye"></span>
+                    <span class="title">主页</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="student.html">
+                    <span class="iconfont icon-xueshengjiguanli"></span>
+                    <span class="title">学生界面</span></a>
+            </li>
+            <li>
+
+                <a href="teacher.html">
+                    <span class="iconfont icon-jiaolian1"></span>
+                    <span class="title">教师界面</span>
+                </a>
+            </li>
+            <!--登录部分未完善
+            <li>
+                <a href="pages/login.html">
+                    <span class="iconfont icon-logindenglu"></span>
+                    <span class="title">登录</span></a>
+            </li>
+            -->
+            <li>
+
+                <a href="#">
+                    <span class="iconfont icon-kaifa"></span>
+                    <span class="title">开发中...</span></a>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Three -->
+    <section id="three" class="wrapper">
+        <div class="inner flex flex-3">
+            <div class="flex-item box">
+                <div class="image fit">
+                    <img src="../images/pic05.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="aiTea.html">
+                        <h3>人工智能</h3>
+                    </a>
+                    <p>Artificial Intelligent</p>
+                </div>
+            </div>
+            <div class="flex-item box">
+                <div class="image fit">
+                    <img src="../images/pic03.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="engineeringTea.html">
+                        <h3>安全开发</h3>
+                    </a>
+                    <p>Software Engineering and Safety</p>
+                </div>
+            </div>
+            <div class="flex-item box">
+                <div class="image fit">
+                    <img src="../images/pic04.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="ctfTea.html">
+                        <h3>CTF</h3>
+                    </a>
+                    <p>Capture The Flag</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <h2>Get In Touch</h2>
+            <ul class="actions">
+                <li><span class="icon fa-envelope"></span> <a href="#">915816252@qq.com</a></li>
+                <li><span class="icon fa-envelope"></span> <a href="#">770690988@qq.com</a></li>
+                <li><span class="icon fa-map-marker"></span>杭州电子科技大学AIS Club</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; AIS Club of HDU
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
